@@ -1,0 +1,240 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #202022;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y:scroll;
+  overflow-x:hidden;
+
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  font-size:16px;
+}
+
+html, body{
+  margin:0;
+  padding: 0;
+}
+
+a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #d1d3ff;
+}
+
+.logo {
+  height:7.5vh;
+  margin: 0 auto;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.sticky-header {
+  background-color:#1a1a1a;
+  position:sticky;
+  top: 0;
+  height:8vh;
+  width:100%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sticky-header a{
+  margin-left:auto;
+  margin-right:12vw;
+  font-size:clamp(0.5rem, 1.5vw, 1rem);
+}
+@media (max-width:375px){
+  .sticky-header a{
+    display:none;
+  }
+}
+
+.moty{
+  text-align:center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
+  max-width:100%;
+  background-color:#573e77;
+  padding:5px;
+}
+.moty:hover{
+  cursor:pointer;
+}
+.moty u{
+  font-size:clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.blurb{
+  text-align:center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
+  width:100%;
+}
+.blurb a{
+  color:#747bff
+}
+.blurb a:hover{
+  text-decoration:underline;
+}
+.blurb b{
+  color: #d3b1ff;
+  font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+}
+.blurb b:hover{
+  color: #ffee00;;
+}
+
+.ribbon{
+  background-color:#1a1a1a;
+  width:20vw;
+  border-color:#1a1a1a;
+  border-radius:1rem;
+  margin:0 auto;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
+}
+
+.container{
+  display:grid;
+  grid-template-columns:15% 60%;
+  column-gap:1vw;
+  width:100%;
+  justify-content:center;
+}
+
+.sidebar{
+  position:sticky;
+  box-sizing:border-box;
+  top: 9vh;
+  height:325px;
+  display:grid;
+  grid-template-rows:150px 75px;
+  row-gap:5%;
+  max-width:15vw;
+  background-color:#1a1a1a;
+  border-radius:2rem;
+  border-color:#1a1a1a;
+  padding:10px;
+  padding-top:0;
+}
+.sidebar h3{
+  border-style:solid;
+  border-width:0;
+  border-bottom-width:0.15rem;
+  font-size: clamp(0.7rem, 1.25vw, 1.3rem);
+}
+.sidebar p{
+  font-size:clamp(0.5rem, 1vw, 1.1rem);
+}
+
+.search{
+  display:grid;
+  grid-template-rows: auto auto;
+  text-align:left;
+}
+.search-boxes{
+  display:grid;
+  grid-template-rows: auto auto auto;
+  row-gap:10%;
+  text-align:left;
+}
+.search-box{
+  width:clamp(10%, 10vw, 100%);
+  height:2vh;
+}
+
+.filters{
+  display: grid;
+  grid-template-rows:auto auto;
+  text-align:left;
+}
+.dropdown{
+  width:clamp(10%, 10vw, 1000%);
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+.cards{
+  border-radius:2rem;
+  border-color:#1a1a1a;
+  background-color:#1a1a1a;
+}
+
+.card-header {
+  text-align:center;
+  display:grid;
+  grid-template-columns: 25% 45% 15% 10%;
+  font-size: clamp(0.5rem, 4vw, 0.75rem);
+  width:100%;
+}
+.card-header h3{
+  cursor:pointer;
+  color: #ffffff;
+}
+.card-header h3:hover{
+  text-decoration:underline;
+}
+
+.card {
+  text-align:left;
+  display:grid;
+  grid-template-columns: 25% 47% 15% 10%;
+  padding-bottom:0.25rem;
+  padding-top:0.25rem;
+  border-style:solid;
+  border-width:0;
+  border-bottom-width:0.3rem;
+  border-color:#202022;
+  width:100%;
+}
+.card h1{
+  font-size: clamp(0.5rem, 3vw, 1.2rem);
+  margin:0.5rem;
+}
+.card h2{
+  font-size: clamp(0.5rem, 3vw, 1.2rem);
+  margin:0.5rem;
+}
+.card h3{
+  font-size: clamp(0.4rem, 2vw, 0.9rem);
+  margin:0.5rem;
+}
+.card h4{
+  font-size: clamp(0.4rem, 2vw, 0.75rem);
+  margin:0.5rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
