@@ -4,7 +4,7 @@ https://opl.ink
 
 __oplink__ was made to help computer science graduates connect with relevant entry-level jobs by filtering out hundreds of fluff from other job boards.
 
-This repo is for the web application without the scraping script.
+This is the PUBLIC repo for the web application and does not include the scraping script.
 
 ## How to Install and Run
 1. Install the required libraries
