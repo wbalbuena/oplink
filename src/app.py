@@ -3,9 +3,9 @@ from sqlalchemy import create_engine, insert, String, Text, select
 from sqlalchemy.orm import Session, DeclarativeBase, Mapped, mapped_column, relationship
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-import sqlite3 
 from flask_cors import CORS
 import os
+from datetime import datetime, timedelta
 
 load_dotenv()
 
@@ -90,6 +90,11 @@ def get_jobs():
     if location:
         #query += f" AND (LOWER(location) LIKE '%{location}%')"
         query = query.filter(Job.location.ilike(f"%{location}%"))
+
+    # restrict job postings to the last week
+    seven_days_ago = datetime.now() - timedelta(days=7, hours=7)
+    seven_days_ago_str = seven_days_ago.strftime("%Y-%m-%d %H:%M")
+    query = query.filter(Job.time >= seven_days_ago_str)
 
     state_dictionary = {
         "AL": "Alabama",
