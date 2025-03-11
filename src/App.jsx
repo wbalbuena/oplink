@@ -53,8 +53,7 @@ export default function App() {
       {bannerDisplay && (
         <div onClick={() => {setBannerDisplay(false)}} className = "moty">
           <p><b>MESSAGE OF THE DAY: 2/25/2025</b></p>
-          <p>oplink is a work in progress! I'm always refining the filters of the jobs I retrieve.  Feel free to let me know of any unrelated jobs that slipped through.  They'll be removed the next time the site is updated!</p>
-          <p>Due to costs, only jobs from a limited amount of states are shown, but if there's enough interest I can continue to expand the scope of the project!</p>
+          <p>...</p>
           <p><u>CLICK TO CLOSE</u></p>
         </div>
       )}
