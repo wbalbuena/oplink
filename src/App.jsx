@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import oplinkLogo from './assets/oplink logo.png'
-import fluff from './assets/fluff.png'
 import './App.css'
 import API_BASE_URL from './config';
 
