@@ -1,10 +1,19 @@
-# oplink
-## Description
-https://opl.ink
+<img src="https://github.com/user-attachments/assets/49c23058-0a01-42d9-9ba8-03388a7bfa35" align="right" height="60" />
 
-__oplink__ was made to help computer science graduates connect with relevant entry-level jobs by filtering out hundreds of fluff from other job boards.
+## oplink
+[__oplink__](https://opl.ink) was made to help computer science graduates connect with relevant entry-level jobs by filtering out hundreds of fluff from other job boards.
 
-This is the PUBLIC repo for the web application and does not include the scraping script.
+🔹 200+ new computer science jobs daily
+
+🔹 Filters out 100+ unrelated job postings daily
+
+🔹 Search by job title, company, and location
+
+🔹 Shows only job postings from the past week
+
+This repo contains the source code for the web application and not for the scraping script.
+
+![oplink](https://github.com/user-attachments/assets/c1aa12c1-18ec-41f4-b3f1-9d1313c3f38d)
 
 ## How to Install and Run
 1. Install the required libraries
