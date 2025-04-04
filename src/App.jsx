@@ -13,7 +13,6 @@ export default function App() {
   const [locationSearchTerm, setLocationSearchTerm] = useState("");
   const [recentJob, setRecentJob] = useState("");
   
-
   const fetchJobs = async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/jobs?sort=${sortField}&order=${sortOrder}&company=${companySearchTerm}&title=${titleSearchTerm}&location=${locationSearchTerm}&state=${selectedState}`)
