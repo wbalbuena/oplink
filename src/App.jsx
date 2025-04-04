@@ -12,6 +12,7 @@ export default function App() {
   const [titleSearchTerm, setTitleSearchTerm] = useState("");
   const [locationSearchTerm, setLocationSearchTerm] = useState("");
   const [recentJob, setRecentJob] = useState("");
+  
 
   const fetchJobs = async () => {
     try {
