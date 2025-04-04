@@ -49,13 +49,6 @@ export default function App() {
           <img src={oplinkLogo} className="logo" alt="outlink logo" />
           <a href="https://www.linkedin.com/in/william-balbuena/" target="_blank">Connect With Me!</a>
       </header>
-      {bannerDisplay && (
-        <div onClick={() => {setBannerDisplay(false)}} className = "moty">
-          <p><b>MESSAGE OF THE DAY: 2/25/2025</b></p>
-          <p>...</p>
-          <p><u>CLICK TO CLOSE</u></p>
-        </div>
-      )}
       <div className = "blurb">
         <p>oplink was made to help <b>computer science</b> graduates connect with relevant <b>entry-level</b> jobs by filtering out hundreds of fluff from other job boards.</p>
         <p>Jobs shown are from the <b>past week</b> and are refreshed <b>daily</b>!</p>
