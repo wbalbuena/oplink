@@ -13,40 +13,40 @@ pipeline {
         }
         stage('Backend Setup') {
             steps {
-                sh 'python -m pip install --upgrade pip'
-                sh 'pip install -r requirements.txt'
-                sh 'pip install gunicorn'
+                bat 'python -m pip install --upgrade pip'
+                bat 'pip install -r requirements.txt'
+                bat 'pip install gunicorn'
             }
         }
         stage('Frontend Setup') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Backend Tests') {
             steps {
                 dir('src') {
-                    //sh 'python -m pytest'
+                    //bat 'python -m pytest'
                 }
             }
         }
         stage('Frontend Tests') {
             steps {
                 dir('src') {
-                    //sh 'npm run lint'
+                    //bat 'npm run lint'
                 }
             }
         }
         stage('Build Frontend') {
             steps {
                 dir('src') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
         stage('Deploy') {
             steps {
-                sh 'git push origin main'
+                bat 'git push origin main'
             }
         }
     }
