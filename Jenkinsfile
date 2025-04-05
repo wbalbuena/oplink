@@ -54,16 +54,20 @@ pipeline {
             steps {
                 script {
                     bat '''
-                    curl -X POST ^
-                      -H "Authorization: Bearer ${RENDER_API_KEY}" ^
-                      -d "serviceId=${RENDER_BACKEND_SERVICE_ID}" ^
-                      https://api.render.com/v1/services/${RENDER_BACKEND_SERVICE_ID}/deploy
+                    curl --request POST ^
+                        --url https://api.render.com/v1/services/%RENDER_BACKEND_SERVICE_ID%/deploys ^
+                        --header "accept: application/json" ^
+                        --header "content-type: application/json" ^
+                        --header "Authorization: Bearer %RENDER_API_KEY%" ^
+                        --data "{\"clearCache\": \"do_not_clear\"}"
                     '''
                     bat '''
-                    curl -X POST ^
-                      -H "Authorization: Bearer ${RENDER_API_KEY}" ^
-                      -d "serviceId=${RENDER_FRONTEND_SERVICE_ID}" ^
-                      https://api.render.com/v1/services/${RENDER_FRONTEND_SERVICE_ID}/deploy
+                    curl --request POST ^
+                        --url https://api.render.com/v1/services/%RENDER_FRONTEND_SERVICE_ID%/deploys ^
+                        --header "accept: application/json" ^
+                        --header "content-type: application/json" ^
+                        --header "Authorization: Bearer %RENDER_API_KEY%" ^
+                        --data "{\"clearCache\": \"do_not_clear\"}"
                     '''
                 }
             }
