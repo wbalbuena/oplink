@@ -33,7 +33,9 @@ pipeline {
         stage('Backend Tests') {
             steps {
                 dir('src') {
-                    bat 'python -m pytest test_app.py '
+                    withEnv(['OPLINK_DATABASE_URL=sqlite:///:memory:']) {
+                        bat 'python -m pytest test_app.py '
+                    }
                 }
             }
         }
