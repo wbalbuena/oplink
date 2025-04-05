@@ -5,6 +5,12 @@ pipeline {
         nodejs 'Node18'
     }
 
+    environment {
+        RENDER_API_KEY = credentials('render-api-key')
+        RENDER_BACKEND_SERVICE_ID = 'oplinkapi'
+        RENDER_FRONTEND_SERVICE_ID = 'oplink'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -46,7 +52,20 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'git push origin main'
+                script {
+                    bat '''
+                    curl -X POST ^
+                      -H "Authorization: Bearer ${RENDER_API_KEY}" ^
+                      -d "serviceId=${RENDER_BACKEND_SERVICE_ID}" ^
+                      https://api.render.com/v1/services/${RENDER_BACKEND_SERVICE_ID}/deploy
+                    '''
+                    bat '''
+                    curl -X POST ^
+                      -H "Authorization: Bearer ${RENDER_API_KEY}" ^
+                      -d "serviceId=${RENDER_FRONTEND_SERVICE_ID}" ^
+                      https://api.render.com/v1/services/${RENDER_FRONTEND_SERVICE_ID}/deploy
+                    '''
+                }
             }
         }
     }
