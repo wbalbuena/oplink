@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         nodejs 'Node18'
-        python 'Python3'
     }
 
     stages {
