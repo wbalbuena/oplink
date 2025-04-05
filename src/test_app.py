@@ -8,6 +8,7 @@ class TestMethods(unittest.TestCase):
     def setUp(self):
         app.config['TESTING'] = True
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
         self.client = app.test_client() # test client for Flask
 
         with app.app_context():
