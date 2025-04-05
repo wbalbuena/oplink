@@ -22,6 +22,7 @@ pipeline {
                 bat 'python -m pip install --upgrade pip'
                 bat 'pip install -r requirements.txt'
                 bat 'pip install gunicorn'
+                bat 'pip install pytest pytest-cov'
             }
         }
         stage('Frontend Setup') {
@@ -32,7 +33,7 @@ pipeline {
         stage('Backend Tests') {
             steps {
                 dir('src') {
-                    //bat 'python -m pytest'
+                    bat 'python -m pytest test_app.py '
                 }
             }
         }
