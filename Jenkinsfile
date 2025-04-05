@@ -33,8 +33,6 @@ pipeline {
         stage('Backend Tests') {
             steps {
                 dir('src') {
-                    bat 'set FLASK_ENV=testing'
-                    bat 'set SQLALCHEMY_DATABASE_URI=sqlite:///:memory:'
                     bat 'python -m pytest test_app.py '
                 }
             }
