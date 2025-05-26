@@ -3,17 +3,29 @@
 ## oplink
 [__oplink__](https://opl.ink) was made to help computer science graduates connect with relevant entry-level jobs by filtering out hundreds of fluff from other job boards.
 
-🔹 200+ new computer science jobs daily
+🔹 **200+** new computer science jobs daily
 
-🔹 Filters out 100+ unrelated job postings daily
+🔹 Filters out **100+** unrelated job postings daily
 
-🔹 Search by job title, company, and location
+🔹 **Search** by job title, company, and location
 
-🔹 Shows only job postings from the past week
+🔹 Shows only the **newest** job postings from the past week
+
+🔹 **Sort** results by company, title, location, or time posted
 
 This repo contains the source code for the web application and not for the scraping script.
 
 ![oplink](https://github.com/user-attachments/assets/c1aa12c1-18ec-41f4-b3f1-9d1313c3f38d)
+
+## What's being filtered?
+
+Currently the filter targets the following:
+
+🔹 **Unrelated job postings**.  Real examples that I've seen include: nurse, psychologist, janitor, doctor, cashier, resort worker.
+
+🔹 **Third-party job boards** that repost old jobs, presenting them as new.
+
+🔹 Companies that **repost the same job posting** in every location when the actual job requires relocation out-of-state.
 
 ## How to Install and Run
 1. Install the required libraries
